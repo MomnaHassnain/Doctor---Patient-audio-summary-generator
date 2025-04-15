@@ -76,7 +76,10 @@ def get_gemini_response(question):
     return response.text
 
 # Initialize chatbot input
-input_text = st.text_input("Enter your question:", key="input")
+input_text = st.text_input(
+    "👉 Copy the English transcription above and paste it here. Then write: 'Generate summary with keywords like patient gender, age, name, symptoms, and doctor’s advice.'", 
+    key="input"
+)
 submit = st.button("generate summary")
 
 # Process text-based questions
